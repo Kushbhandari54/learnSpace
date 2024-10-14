@@ -8,7 +8,8 @@ export default function Home() {
   const text = "Welcome to my project!";
   const [displayedText, setDisplayedText] = useState("");
   const [currentLetterIndex, setCurrentLetterIndex] = useState(0);
-  const token = localStorage.getItem("token");
+  const token = false;
+  // localStorage.getItem("token");
 
   useEffect(() => {
     if (currentLetterIndex < text.length) {
