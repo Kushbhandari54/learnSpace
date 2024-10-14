@@ -1,11 +1,11 @@
 "use client";
-import { Button } from "@mui/material";
+import { Box, Button } from "@mui/material";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function Home() {
   const router = useRouter();
-  const text = "Welcome to my project! Advait Gendu";
+  const text = "Welcome to my project!";
   const [displayedText, setDisplayedText] = useState("");
   const [currentLetterIndex, setCurrentLetterIndex] = useState(0);
   const token = false;
@@ -33,6 +33,8 @@ export default function Home() {
           </span>
         ))}
       </h1>
+      <Box sx={{ display: "flex", justifyContent: "center", py: 2 }}></Box>
+
       {!token && (
         <Button
           variant="outlined"
@@ -42,6 +44,13 @@ export default function Home() {
           Login
         </Button>
       )}
+      <Button
+        variant="outlined"
+        sx={{ mt: 3, ml: 4 }}
+        onClick={() => router.push("/gendu-list")}
+      >
+        See Top Gendu
+      </Button>
     </div>
   );
 }
