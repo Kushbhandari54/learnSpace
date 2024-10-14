@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 export default function Home() {
   const router = useRouter();
-  const text = "Welcome to my project!";
+  const text = "Welcome to my project! Advait Gendu";
   const [displayedText, setDisplayedText] = useState("");
   const [currentLetterIndex, setCurrentLetterIndex] = useState(0);
   const token = false;

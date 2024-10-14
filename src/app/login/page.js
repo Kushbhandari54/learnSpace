@@ -43,6 +43,7 @@ const Login = () => {
       }
 
       const data = await response.json();
+
       // Optionally, handle login data (e.g., token storage)
       // localStorage.setItem("token", data?.jwt);
       router.push("/");
